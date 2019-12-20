@@ -1,3 +1,12 @@
 ---
 
 deepspeech_install_location: "/var/deepspeech"
+
+deepspeech_server_config_path: "/data/configs/voice/stt/deepspeech/server-config.json"
+deepspeech_model_directory: "/data/lib/deepspeech-0.6.0-models"
+
+deepspeech_model_path: "{{ deepspeech_model_directory }}/output_graph.pbmm"
+deepspeech_language_model_path: "{{ deepspeech_model_directory }}/lm.binary"
+deepspeech_alphabet_path: "{{ deepspeech_model_directory }}/alphabet.txt"
+deepspeech_trie_path: "{{ deepspeech_model_directory }}/trie"
+

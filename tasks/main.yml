@@ -13,5 +13,14 @@
   pip: 
     name:
       - deepspeech-gpu
+      - git+https://github.com/constructorfleet/deepspeech-server.git#deepspeech-server
     virtualenv: "{{ deepspeech_install_location }}"
     virtualenv_python: python3
+
+- name: Deepseech server config file
+  template:
+    src: deepspeech-server-config.json.j2
+    dest: "{{ deepspeech_server_config_path }}"
+    owner: root
+    group: root
+    mode: "644"
