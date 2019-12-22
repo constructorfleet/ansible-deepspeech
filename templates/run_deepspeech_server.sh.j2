@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source {{ deepspeech_install_location }}/bin/activate
+python deepspeech-server --config {{ deepspeech_server_config_path }}

@@ -7,7 +7,7 @@ ConditionPathIsMountPoint=/data
 
 [Service]
 PIDFile=/run/deepspeech-server
-ExecStart=/bin/bash -c "source {{ deepspeech_install_location }}/bin/activate; python deepspeech-server --config {{ deepspeech_server_config_path }}"
+ExecStart={{ deepspeech_install_location }}/run_deep_spech_server.sh
 PrivateTmp=true
 
 [Install]
