@@ -1,0 +1,14 @@
+[Unit]
+Description=Deepspeech Audio Transcription Service
+After=autofs.service data.mount
+Requires=autofs.service data.mount
+RequiresMountsFor=/data
+ConditionPathIsMountPoint=/data
+
+[Service]
+PIDFile=/run/deepspeech-server
+ExecStart={{ deepspeech_install_location }}/bin/python deepspeech-server --config {{ deepspeech_server_config_path }}
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
