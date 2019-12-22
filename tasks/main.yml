@@ -27,8 +27,8 @@
 
 - name: Deepseech server run script
   template:
-    src: run_deep_spech_server.sh.j2
-    dest: "{{ deepspeech_install_location }}/run_deep_spech_server.sh"
+    src: run_deepspeech_server.sh.j2
+    dest: "{{ deepspeech_install_location }}/run_deepspeech_server.sh"
     mode: "0777"
     owner: root
     group: root
