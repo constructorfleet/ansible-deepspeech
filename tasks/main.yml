@@ -23,4 +23,19 @@
     dest: "{{ deepspeech_server_config_path }}"
     owner: root
     group: root
-    mode: "644"
+    mode: "0644"
+
+- name: Deepseech server service unit file
+  template:
+    src: deepspeech-server.service.j2
+    dest: /etc/systemd/system/deepspeech-server.service
+    mode: "0755"
+    owner: root
+    group: root
+
+- name: Register, enable, and start deepspeech-server service
+  systemd:
+    name: deepspeech-server
+    state: started
+    enabled: yes
+    daemon_reload: yes

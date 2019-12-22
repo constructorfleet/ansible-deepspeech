@@ -2,6 +2,8 @@
 
 deepspeech_install_location: "/var/deepspeech"
 
+deepspeech_server_port: 9090
+
 deepspeech_server_config_path: "/data/configs/voice/stt/deepspeech/server-config.json"
 deepspeech_model_directory: "/data/lib/deepspeech-0.6.0-models"
 
