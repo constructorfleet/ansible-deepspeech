@@ -7,6 +7,8 @@ ConditionPathIsMountPoint=/data
 
 [Service]
 PIDFile=/run/deepspeech-server
+Environment="CUDA_DEVICE_ORDER=PCI_BUS_ID"
+Environment=""
 ExecStart={{ deepspeech_install_location }}/run_deepspeech_server.sh
 PrivateTmp=true
 
